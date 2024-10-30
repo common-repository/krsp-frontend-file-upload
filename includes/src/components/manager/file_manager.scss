@@ -1,0 +1,78 @@
+@import "../../main.scss";
+.file-manager {
+	clear: both;
+	border: 1px solid #eee;
+	margin-top: 1em;
+	.uploaded-file-list {
+		@include container(1200px);
+		.field-divider {
+			margin-bottom: 20px;
+		}
+		.uploaded-images {
+			padding: 1em;
+		}
+		ul {
+			overflow: hidden;
+		}
+		ul,
+		li {
+			list-style-type: none;
+			list-style: none !important;
+			margin: 0;
+		}
+		.uploaded-image {
+			list-style: none;
+			margin-bottom: gutter();
+			@include full;
+			@include susy-media(600px) {
+				@include gallery(6);
+			}
+			@include susy-media(900px) {
+				@include gallery(6);
+			}
+		}
+	}
+	.text-align.center {
+		text-align: center
+	}
+	.loading-svg,
+	.saving-message {
+		display: inline-block;
+	}
+	.no-images {
+		text-align: center;
+		padding: 2em;
+	}
+	.loading-wrapper {
+		display: flex;
+		align-items: center;
+		justify-items: center;
+		justify-content: center;
+		padding-top: 1em;
+		padding-bottom: 1em;
+		span {
+			margin-left: 1em;
+		}
+	}
+	.krsp-upload-field {
+		text-align: center; // padding: 1em;
+		.krsp-upload-divider {
+			// margin-bottom: 1em;
+			span {
+				position: absolute;
+				transform: translateX(-50%);
+				left: 50%;
+				background: #fff;
+				padding: 4px 1em 0px 1em;
+			}
+		}
+	}
+	&>.image-actions {
+		text-align: center;
+		padding: 1em;
+		button {
+			transition: background 0.1s ease;
+			&:hover {}
+		}
+	}
+}

@@ -1,0 +1,58 @@
+<div class='wrap' id='settings_page'>
+  <div id="message" v-if="message" class="updated notice notice-success is-dismissible">
+    <p>
+      {{ message }}
+    </p>
+    <button type="button" class="notice-dismiss" @click="dismissMessage">
+      <span class="screen-reader-text">Dismiss this notice.</span>
+    </button>
+  </div>
+  <h1>KRSP File Upload Settings</h1>
+  <div class="krsp-file-upload-settings">
+    <div class="upload-limits" :class="{'is-limit': vm.limitUploads}">
+      <p>
+        <label>
+          <span>Limit Uploads
+            <em>Defaults to 1 file to prevent overflow</em>
+          </span>
+          <input type="checkbox" id="checkbox" v-model="vm.limitUploads">
+          <label v-if="vm.limitUploads" for="checkbox">Disable to set limit to default of 1</label>
+          <label v-else for="checkbox">
+            Check this to limit amount of simultaenous uploads</label>
+          </label>
+      </p>
+      <div v-if="vm.limitUploads">
+        <p>
+          <label>
+            <span>Upload File Limit</span>
+            <input v-model='vm.uploadLimit' type='number' min="1" class='text-medium' />
+          </label>
+        </p>
+      </div>
+    </div>
+
+    <p>
+      <label>
+        <span>Allowed File Extensions</span>
+        <input v-model='vm.fileExtensions' type='text' placeholder="jpg,jpeg,png" class='text-medium'
+        />
+      </label>
+    </p>
+
+    <p>
+      <label>
+        <span>Max File Size</span>
+        <input v-model='vm.sizeLimit' id="sizeLimit" type='number' min="0.1" step="0.5" class='text-medium'
+        />
+        <label for="sizeLimit">Mb</label>
+        <p>Defaults to 1Mb</p>
+      </label>
+    </p>
+
+    <p>
+      <button @click='saveOptions' :disabled='isSaving' id='krsp-submit-settings' class='button button-primary'>Save Settings</button>
+      <img v-if='isSaving == true' id='loading-indicator' src='<?= get_site_url() ?>/wp-admin/images/wpspin_light-2x.gif'
+        alt='Loading indicator' />
+    </p>
+  </div>
+</div>

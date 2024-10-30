@@ -1,0 +1,77 @@
+@import "../../../main";
+.uploaded-image {
+  position: relative;
+  .is-updated {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    color: #fff;
+  }
+  .image-wrapper {
+    border: 1px solid #eee;
+    position: relative;
+    .image-container {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .image-actions {
+      // background: #222;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2px;
+      .image-caption {
+        text-align: center;
+        justify-content: center;
+        span {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        input {
+          padding: 0;
+          padding-left: 10px;
+        }
+      }
+      li {
+        display: inline-block;
+        button {
+          background: transparent;
+          padding: 0.5em 0.8em;
+        }
+        .edit-image {
+          transition: background 0.2s ease;
+          i {
+            color: $buttoncolor;
+          }
+          &:hover {
+            background: #3c98ce;
+            border-radius: 0;
+            i {
+              color: #fff;
+            }
+          }
+        }
+        .delete-image {
+          transition: background 0.2s ease;
+          i {
+            color: rgb(228, 72, 72);
+          }
+          &:hover {
+            border-radius: 0;
+            background: rgb(228, 72, 72);
+            i {
+              color: #fff;
+            }
+          }
+        }
+        &:last-child {
+          float: right;
+        }
+      }
+    }
+  }
+}

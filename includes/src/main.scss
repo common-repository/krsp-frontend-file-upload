@@ -1,0 +1,12 @@
+@import "susy/sass/susy";
+@import "grid";
+* {
+  box-sizing: border-box;
+}
+
+/* Global Variables */
+$dropcolor: #f9f9f9;
+$textcolor: #aeaeae;
+$buttoncolor: #3e667e;
+
+@import "base";

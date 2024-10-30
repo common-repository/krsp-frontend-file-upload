@@ -1,0 +1,12 @@
+.wrap label span {
+
+    font-weight: bold;
+    display: block;
+    margin-bottom: 3px;
+}
+
+#loading-indicator {
+
+    height: 16px;
+    width: 16px;
+}

@@ -1,0 +1,15 @@
+@import "../../main.scss";
+.upload-temp-images {
+	list-style: none;
+}
+
+.upload-temp-images {
+	@include container(100%);
+	li {
+		@include full;
+		margin-bottom: gutter();
+		@include susy-media(900px) {
+			@include gallery(6);
+		}
+	}
+}

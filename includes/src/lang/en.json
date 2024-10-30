@@ -1,0 +1,35 @@
+{
+  "uploaded": {
+    "success": "Images have been uploaded",
+    "add_captions": "You can now add captions to your images (optional)",
+    "button_confirm": "Ok"
+  },
+  "errors": {
+    "max_limit": "Error uploading",
+    "max_limit_msg": "You can only add up to 1 file | You can only add up to {count} files at a time"
+  },
+  "delete": {
+    "confirm": "Are you sure?",
+    "message_warning": "You will not be able to recover the image!",
+    "confirm_button": "Yes, delete it!",
+    "cancel_button": "No, keep it"
+  },
+  "dropbox": {
+    "text": "Drag & Drop your files",
+    "add_button": "Add Images"
+  },
+  "manager": {
+    "no_images": "No Images",
+    "loading": "Loading Images...",
+    "busy": "Saving...",
+    "button_text": "Save Image Captions",
+    "success_title": "All images saved",
+    "success_text": "You can upload more images",
+    "confirm_text": "Ok"
+  },
+  "queue": {
+    "busy": "Wait we're still uploading...",
+    "finishing": "Finishing up...",
+    "saving": "Saving File!"
+  }
+}
